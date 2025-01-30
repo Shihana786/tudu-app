@@ -11,7 +11,7 @@
         <h1>To-Do list</h1>
         <form method="POST" action="/add">
             <input type="text" name="tudu" placeholder="New Task" required>
-            <button type="submit">add</button>
+            <button type="submit"><i class="fa-solid fa-plus"></i></button>
         </form>
         <ul>
             {% for tudus in tudu %}
@@ -19,7 +19,7 @@
                 <span>{{tudus.name}}</span>
                 <form class="form2" action="/edit/{{tudus.id}}" method="POST" style="display:inline">
                     <input type="text" name="edit" placeholder="Edit New" required>
-                    <button type="submit">save</button>
+                    <button type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
                 </form>
                 <a href="/delete/{{tudus.id}}" style="color:red"><i class="fa-solid fa-trash"></i></a>
                 <a href="/toggle/{{tudus.id}}" style="color:green"><i class="fa-solid fa-check"></i></a>

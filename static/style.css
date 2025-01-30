@@ -1,14 +1,15 @@
 
 
-body {
+body{
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f6f4f977;
     color: #333;
-    padding: 20px;
+    justify-content: center;
 }
 .container{
-    background-color: #17fff3;
+    background-color: #17a2ff;
     width: 600px;
+    margin: 50px auto;
 }
 
 h1 {
@@ -39,7 +40,7 @@ button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
@@ -58,7 +59,7 @@ li {
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 4px;
-    display: flex;
+    display: center;
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
