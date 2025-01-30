@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="static/style.css"/>
+        <title>
+            flask To-Do list
+        </title>
+    </head>
+    <body>
+        <div class="container">
+        <h1>To-Do list</h1>
+        <form method="POST" action="/add">
+            <input type="text" name="tudu" placeholder="New Task" required>
+            <button type="submit">add</button>
+        </form>
+        <ul>
+            {% for tudus in tudu %}
+            <li class="{% if tudus.completed %}completed {% endif %}">
+                <span>{{tudus.name}}</span>
+                <form class="form2" action="/edit/{{tudus.id}}" method="POST" style="display:inline">
+                    <input type="text" name="edit" placeholder="Edit New" required>
+                    <button type="submit">save</button>
+                </form>
+                <a href="/delete/{{tudus.id}}" style="color:red"><i class="fa-solid fa-trash"></i></a>
+                <a href="/toggle/{{tudus.id}}" style="color:green"><i class="fa-solid fa-check"></i></a>
+        
+            </li>
+            {% endfor %}
+        </ul>
+    </div>      
+    </body>
+
+</html>
+    
